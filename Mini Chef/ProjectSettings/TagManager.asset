@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Basket
   - Ingredient
+  - UI
   layers:
   - Default
   - TransparentFX

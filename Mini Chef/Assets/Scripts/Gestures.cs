@@ -36,8 +36,8 @@ public class Gestures : MonoBehaviour
     {
         // No se que es esto pero funciona
         Vector3 curPos =
-         new Vector3(Input.mousePosition.x - posX,
-                     Input.mousePosition.y - posY, dist.z);
+            new Vector3(Input.mousePosition.x - posX,
+                        Input.mousePosition.y - posY, dist.z);
 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(curPos);
         transform.position = worldPos;
