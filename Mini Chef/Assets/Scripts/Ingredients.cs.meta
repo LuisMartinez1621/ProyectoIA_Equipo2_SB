@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9866957d67802634a8787cf66c84436f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - boteMayonesa: {fileID: 8834040745916691151, guid: 7645f6520d6abb9418d171033abc7264,
+      type: 3}
+  - queso: {fileID: 4868712823352443359, guid: 0515d1e3e68b58045a4162fd586279d0, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,21 +9,9 @@ public class Gestures : MonoBehaviour
     // Vector de la distancia del objeto
     Vector3 dist;
 
-    // Vector de la posición inicial
-    Vector3 startPosition;
-
     // Variables que guardan las posiciones X y Y
     float posX;
     float posY;
-
-    // Mucho texto
-    //public GameObject text;
-
-    private void Awake()
-    {
-        //startPosition = transform.position;
-        //text = GameObject.Find("Text");
-    }
 
     // Método que ocurre cuando se presiona un ingrediente
     void OnMouseDown()
@@ -36,14 +24,17 @@ public class Gestures : MonoBehaviour
     // Método que ocurre cuando se suelta un ingrediente
     private void OnMouseUp()
     {
+        // Se toma la posición del padre (de la base que tenía debajo)
         Vector3 cosa = transform.parent.GetComponent<Transform>().position;
-        //transform.position = cosa; //transform.parent.GetComponent<Transform>().position;
-        transform.localPosition = new Vector3(0, 20f, 0);
+
+        // Se le suman otra vez 3 en Z para que quede más arriba de la base
+        transform.localPosition = new Vector3(0, 0, 3f);
     }
 
-    // Método que ocurre cuando se mantiene presionado sobre un ingrediente
+    // Método que ocurre cuando se mantiene presionado sobre un ingrediente (osea el movimiento)
     void OnMouseDrag()
     {
+        // No se que es esto pero funciona
         Vector3 curPos =
          new Vector3(Input.mousePosition.x - posX,
                      Input.mousePosition.y - posY, dist.z);
@@ -51,27 +42,4 @@ public class Gestures : MonoBehaviour
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(curPos);
         transform.position = worldPos;
     }
-
-    // Método cuando se acerca a una canasta
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Basket")
-        {
-            transform.localScale += new Vector3(.5f, 10f, .5f);
-            //text.GetComponent<Text>().text = "Está en la cesta";
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Basket")
-        {
-            transform.localScale -= new Vector3(.5f, 10f, .5f);
-            //text.GetComponent<Text>().text = "Salió de la cesta";
-        }
-    }
-    /*if(other.tag == "Basket")
-    {
-        transform.localScale = new Vector3(2f, 2f, 2f);
-    }*/
 }
