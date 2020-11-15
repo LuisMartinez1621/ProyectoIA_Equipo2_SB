@@ -4,9 +4,12 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - boteMayonesa: {fileID: 8834040745916691151, guid: 7645f6520d6abb9418d171033abc7264,
-      type: 3}
-  - queso: {fileID: 4868712823352443359, guid: 0515d1e3e68b58045a4162fd586279d0, type: 3}
+  - boteMayonesa: {instanceID: 0}
+  - boteMoztaza: {instanceID: 0}
+  - lechuga: {instanceID: 0}
+  - pan: {instanceID: 0}
+  - queso: {instanceID: 0}
+  - nada: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

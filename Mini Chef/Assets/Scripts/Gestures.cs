@@ -32,7 +32,7 @@ public class Gestures : MonoBehaviour
     }
 
     // Método que ocurre cuando se mantiene presionado sobre un ingrediente (osea el movimiento)
-    void OnMouseDrag()
+    public void OnMouseDrag()
     {
         // No se que es esto pero funciona
         Vector3 curPos =

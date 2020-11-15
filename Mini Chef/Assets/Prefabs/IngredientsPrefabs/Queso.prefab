@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5094143162963271749}
   m_Layer: 0
   m_Name: Queso
-  m_TagString: Ingredient
+  m_TagString: Optional
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

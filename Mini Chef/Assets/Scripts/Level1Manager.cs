@@ -17,11 +17,7 @@ public class Level1Manager : MonoBehaviour
     GameObject[,] ingredients = new GameObject[3, 3];
 
     // TODOS LOS INGREDIENTES!
-    public GameObject boteMayonesa;
-    public GameObject boteMoztaza;
-    public GameObject lechuga;
-    public GameObject pan;
-    public GameObject queso;
+    Ingredients levels;
 
     // Lista donde se guardarán los ingredientes del nivel
     GameObject[] list;
@@ -31,18 +27,8 @@ public class Level1Manager : MonoBehaviour
     void Start()
     {
         // LISTA DE PRUEBA, NO SERÁ SIEMPRE ASÍ
-        list = new GameObject[]
-        {
-            boteMayonesa,
-            boteMoztaza,
-            lechuga,
-            pan,
-            queso,
-            boteMoztaza,
-            queso,
-            pan,
-            lechuga
-        };
+        levels = GetComponent<Ingredients>();
+        list = levels.GetRecipe(1);
 
         // "Randomizador" de la lista de ingredientes
         RandomArray(list);

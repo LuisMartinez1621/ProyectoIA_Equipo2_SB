@@ -23,20 +23,37 @@ public class BasketTriggers : MonoBehaviour
     // Método cuando se acerca a una canasta
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Ingredient")
+        other.transform.localScale += new Vector3(.5f, .5f, .5f);
+        text.GetComponent<Text>().text = "Está en la cesta";
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetMouseButtonUp(0))
         {
-            other.transform.localScale += new Vector3(.5f, .5f, .5f);
-            text.GetComponent<Text>().text = "Está en la cesta";
+            switch(other.tag)
+            {
+                case "Needed":
+                    text.GetComponent<Text>().text = "Ingrediente necesario";
+                    break;
+                case "Optional":
+                    text.GetComponent<Text>().text = "Ingrediente opcional";
+                    break;
+                case "Wrong":
+                    text.GetComponent<Text>().text = "Ingrediente incorrecto";
+                    break;
+                default:
+                    text.GetComponent<Text>().text = "Hubo algo siniestro";
+                    break;
+            }
+            other.gameObject.SetActive(false);
         }
     }
 
     // Método cuando algo sale de la canasta
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Ingredient")
-        {
-            other.transform.localScale -= new Vector3(.5f, .5f, .5f);
-            text.GetComponent<Text>().text = "Salió de la cesta";
-        }
+        other.transform.localScale -= new Vector3(.5f, .5f, .5f);
+        text.GetComponent<Text>().text = "Salió de la cesta";
     }
 }

@@ -7,6 +7,9 @@ TagManager:
   - Basket
   - Ingredient
   - UI
+  - Needed
+  - Optional
+  - Wrong
   layers:
   - Default
   - TransparentFX
