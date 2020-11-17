@@ -28,7 +28,7 @@ public class Level1Manager : MonoBehaviour
     {
         // LISTA DE PRUEBA, NO SERÁ SIEMPRE ASÍ
         levels = GetComponent<Ingredients>();
-        list = levels.GetRecipe(1);
+        list = levels.GetRecipe();
 
         // "Randomizador" de la lista de ingredientes
         RandomArray(list);
@@ -78,7 +78,7 @@ public class Level1Manager : MonoBehaviour
             for (int y = 0; y < 3; y++)
             {
                 // Se crea una instancia de un ingrediente (en orden de la lista de ingredientes)
-                ingredients[x, y] = Instantiate(list[c], cylinders[x, y].GetComponent<Transform>().transform.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+                ingredients[x, y] = Instantiate(list[c], cylinders[x, y].GetComponent<Transform>().transform.position, Quaternion.Euler(new Vector3(-90, 90, 0)));
 
                 // Se asigna una "Base" como padre de la base (para que no se muevan de su lugar)
                 ingredients[x, y].transform.parent = cylinders[x, y].GetComponent<Transform>().transform;

@@ -5,40 +5,148 @@ using UnityEngine;
 public class Ingredients : MonoBehaviour
 {
     // TODOS LOS INGREDIENTES!
+    public GameObject boteCrema;
     public GameObject boteMayonesa;
-    public GameObject boteMoztaza;
+    public GameObject boteMostaza;
+    public GameObject harina;
+    public GameObject huevos;
+    public GameObject jamon;
+    public GameObject leche;
     public GameObject lechuga;
+    public GameObject mantequilla;
+    public GameObject miel;
     public GameObject pan;
+    public GameObject pimienta;
     public GameObject queso;
+    public GameObject sal;
     public GameObject nada;
 
+    // Script de las variables
+    GameVariables gameVariables;
+
+    // Variable de la receta
+    public int recipe;
+
     // Método que regresa un array
-    public GameObject[] GetRecipe (int recipe)
+    public GameObject[] GetRecipe ()
     {
+        // Se hace referencia al script que contiene las variables del juego
+        gameVariables = GameObject.Find("GameVariables").GetComponent<GameVariables>();
+
+        // Se establece la receta del nivel
+        recipe = gameVariables.level1Recipe;
+
+        // Se crea el arreglo
         GameObject[] array;
 
+        // Se crean la lista de ingredientes del nivel
         switch (recipe)
         {
+            // Sandwich
             case 1:
                 array = new GameObject[]
                 {
-                    pan,
-                    pan,
+                    // Debe llevar
+                    jamon,
                     pan,
                     queso,
-                    queso,
-                    queso,
-                    nada,
-                    nada,
-                    nada
+                    // Puede llevar
+                    boteMayonesa,
+                    boteMostaza,
+                    lechuga,
+                    // No lleva
+                    harina,
+                    leche,
+                    miel
                 };
+                array = PutTags(array, 3, 3, 3);
+                break;
+
+            // Huev0s con jamón
+            case 2:
+                array = new GameObject[]
+                {
+                    // Debe llevar
+                    huevos,
+                    jamon,
+                    leche,
+                    mantequilla,
+                    // Puede llevar
+                    pimienta,
+                    queso,
+                    sal,
+                    // No lleva
+                    boteCrema,
+                    lechuga
+                };
+                array = PutTags(array, 4, 3, 2);
+                break;
+
+            // Ensalada de atún
+            case 3:
+                array = new GameObject[]
+                {
+                    // Debe llevar
+                    nada,
+                    nada,
+                    // Puede llevar
+                    boteCrema,
+                    boteMayonesa,
+                    pimienta,
+                    sal,
+                    // No lleva
+                    pan,
+                    harina,
+                    miel
+                };
+                array = PutTags(array, 2, 4, 3);
+                break;
+
+            // Arroz con leshe
+            case 4:
+                array = new GameObject[]
+                {
+                    // Debe llevar
+                    nada, //agua
+                    nada, //arroz
+                    leche,
+                    // Puede llevar
+                    nada, //canela
+                    nada, //pasas
+                    // No lleva
+                    boteMostaza,
+                    jamon,
+                    pan,
+                    queso
+
+                };
+                array = PutTags(array, 3, 2, 4);
+                break;
+
+            // Hot cakes
+            case 5:
+                array = new GameObject[]
+                {
+                    // Debe llevar
+                    harina,
+                    huevos,
+                    leche,
+                    // Puede llevar
+                    mantequilla,
+                    miel,
+                    // No lleva
+                    boteMayonesa,
+                    pimienta,
+                    pan,
+                    lechuga
+                };
+                array = PutTags(array, 3, 2, 4);
                 break;
 
             default:
                 array = new GameObject[] { };
                 break;
         }
-        array = PutTags(array, 3, 3, 3);
         return array;
     }
 

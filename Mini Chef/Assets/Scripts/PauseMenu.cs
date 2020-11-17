@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -27,6 +28,12 @@ public class PauseMenu : MonoBehaviour
     public void CloseMenu()
     {
         Activate(false, true);
+    }
+
+    // Método para cambiar de receta
+    public void ChangeRecipe()
+    {
+        SceneManager.LoadScene("Nivel 1 Menu");
     }
 
     // Método para salir de la aplicación
