@@ -18,6 +18,10 @@ public class PauseMenu : MonoBehaviour
     // ImageTarget
     public GameObject imageTarget;
 
+    // Cosas del timer
+    public GameObject clock;
+    public GameObject timer;
+
     // Método para abrir el menú
     public void OpenMenu()
     {
@@ -49,5 +53,7 @@ public class PauseMenu : MonoBehaviour
         pauseButton.SetActive(b);
         infoBox.SetActive(b);
         imageTarget.SetActive(b);
+        timer.SetActive(b);
+        clock.SetActive(b);
     }
 }

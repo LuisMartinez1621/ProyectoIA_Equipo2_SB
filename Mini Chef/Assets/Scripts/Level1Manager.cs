@@ -40,12 +40,6 @@ public class Level1Manager : MonoBehaviour
         GenerateIngredients();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // AQUÍ NO PONGAN NADA (de momento)
-    }
-
     // Método que genera los cilindros base
     void GenerateBase()
     {

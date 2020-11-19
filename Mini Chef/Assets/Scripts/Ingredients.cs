@@ -5,9 +5,13 @@ using UnityEngine;
 public class Ingredients : MonoBehaviour
 {
     // TODOS LOS INGREDIENTES!
+    public GameObject agua;
+    public GameObject arroz;
+    public GameObject atun;
     public GameObject boteCrema;
     public GameObject boteMayonesa;
     public GameObject boteMostaza;
+    public GameObject canela;
     public GameObject harina;
     public GameObject huevos;
     public GameObject jamon;
@@ -16,9 +20,11 @@ public class Ingredients : MonoBehaviour
     public GameObject mantequilla;
     public GameObject miel;
     public GameObject pan;
+    public GameObject pasas;
     public GameObject pimienta;
     public GameObject queso;
     public GameObject sal;
+    public GameObject verdura;
     public GameObject nada;
 
     // Script de las variables
@@ -87,8 +93,8 @@ public class Ingredients : MonoBehaviour
                 array = new GameObject[]
                 {
                     // Debe llevar
-                    nada,
-                    nada,
+                    atun,
+                    verdura,
                     // Puede llevar
                     boteCrema,
                     boteMayonesa,
@@ -107,12 +113,12 @@ public class Ingredients : MonoBehaviour
                 array = new GameObject[]
                 {
                     // Debe llevar
-                    nada, //agua
-                    nada, //arroz
+                    agua,
+                    arroz,
                     leche,
                     // Puede llevar
-                    nada, //canela
-                    nada, //pasas
+                    canela,
+                    pasas,
                     // No lleva
                     boteMostaza,
                     jamon,

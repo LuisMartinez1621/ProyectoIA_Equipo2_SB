@@ -8,8 +8,12 @@ public class GameVariables : MonoBehaviour
     // Cosas
     public static GameVariables gameVariables;
 
-    // Nivel elegido
+    // Nivel1
     public int level1Recipe = 0;
+    public int ingredientsCount = 0;
+
+    // Puntos de un nivel
+    public float points = 0;
 
     //Awakakake
     private void Awake()
@@ -26,17 +30,5 @@ public class GameVariables : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
