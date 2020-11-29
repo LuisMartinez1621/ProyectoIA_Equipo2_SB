@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8624088921581840821}
   m_Layer: 0
   m_Name: Miel
-  m_TagString: Optional
+  m_TagString: Wrong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

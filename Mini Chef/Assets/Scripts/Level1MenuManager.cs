@@ -15,6 +15,10 @@ public class Level1MenuManager : MonoBehaviour
     // Panel de los detalles de la receta
     public GameObject recipeDetail;
 
+    // Panel de las instrucciones
+    public GameObject instructionPanel1;
+    public GameObject instructionPanel2;
+
     // GameObjects de las imágenes
     public GameObject image1;
     public GameObject image2;
@@ -23,6 +27,7 @@ public class Level1MenuManager : MonoBehaviour
     public GameObject image5;
     public GameObject image6;
     public GameObject image7;
+    public GameObject image8;
 
     // Texto de la pantalla de detalles
     public Text timer;
@@ -111,18 +116,20 @@ public class Level1MenuManager : MonoBehaviour
         {
             // Sandwich
             case 1:
-                image6.SetActive(true);
+                image3.SetActive(true);
+                image7.SetActive(true);
                 SetImage(image1, "Icons/Jamon", "Jamón");
                 SetImage(image2, "Icons/Pan", "Pan");
                 SetImage(image3, "Icons/Queso", "Queso");
-                SetImage(image4, "Icons/Mostaza", "Mostaza");
-                SetImage(image5, "Icons/Mayonesa", "Mayonesa");
-                SetImage(image6, "Icons/Lechuga", "Lechuga");
+                SetImage(image5, "Icons/Mostaza", "Mostaza");
+                SetImage(image6, "Icons/Mayonesa", "Mayonesa");
+                SetImage(image7, "Icons/Lechuga", "Lechuga");
                 break;
 
             // Huev0s
             case 2:
-                image6.SetActive(true);
+                image3.SetActive(true);
+                image4.SetActive(true);
                 image7.SetActive(true);
                 SetImage(image1, "Icons/Huevo", "Huevos");
                 SetImage(image2, "Icons/Leche", "Leche");
@@ -135,31 +142,34 @@ public class Level1MenuManager : MonoBehaviour
 
             // Ensalada de atún
             case 3:
-                image6.SetActive(true);
+                image7.SetActive(true);
+                image8.SetActive(true);
                 SetImage(image1, "Icons/Atun", "Atún");
                 SetImage(image2, "Icons/Verduras", "Verduras");
-                SetImage(image3, "Icons/Pimienta", "Pimienta");
-                SetImage(image4, "Icons/Mayonesa", "Mayonesa");
-                SetImage(image5, "Icons/Sal", "Sal");
-                SetImage(image6, "Icons/Crema", "Crema");
+                SetImage(image5, "Icons/Pimienta", "Pimienta");
+                SetImage(image6, "Icons/Mayonesa", "Mayonesa");
+                SetImage(image7, "Icons/Sal", "Sal");
+                SetImage(image8, "Icons/Crema", "Crema");
                 break;
 
             // Arroz con leche
             case 4:
+                image3.SetActive(true);
                 SetImage(image1, "Icons/Agua", "Agua");
                 SetImage(image2, "Icons/Arroz", "Arroz");
                 SetImage(image3, "Icons/Leche", "Leche");
-                SetImage(image4, "Icons/Canela", "Canela");
-                SetImage(image5, "Icons/Pasas", "Pasas");
+                SetImage(image5, "Icons/Canela", "Canela");
+                SetImage(image6, "Icons/Pasas", "Pasas");
                 break;
             
             // Hotcakes
             case 5:
+                image3.SetActive(true);
                 SetImage(image1, "Icons/Harina", "Harina");
                 SetImage(image2, "Icons/Leche", "Leche");
                 SetImage(image3, "Icons/Huevo", "Huevos");
-                SetImage(image4, "Icons/Mantequilla", "Mantequilla");
-                SetImage(image5, "Icons/Miel", "Miel");
+                SetImage(image5, "Icons/Mantequilla", "Mantequilla");
+                SetImage(image6, "Icons/Miel", "Miel");
                 break;
         }
     }
@@ -187,8 +197,24 @@ public class Level1MenuManager : MonoBehaviour
     // Método para ocultar las cosas
     void Hide()
     {
-        image6.SetActive(false);
+        image3.SetActive(false);
+        image4.SetActive(false);
         image7.SetActive(false);
+        image8.SetActive(false);
+    }
+
+    // Método para mostrar las primeras instrucciones
+    public void ShowInstructions1()
+    {
+        recipeDetail.SetActive(false);
+        instructionPanel1.SetActive(true);
+    }
+
+    // Método para mostrar las segundas instrucciones
+    public void ShowInstructions2()
+    {
+        instructionPanel1.SetActive(false);
+        instructionPanel2.SetActive(true);
     }
 
     // Método para cargar el nivel

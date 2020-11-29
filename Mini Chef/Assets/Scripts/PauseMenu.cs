@@ -9,18 +9,16 @@ public class PauseMenu : MonoBehaviour
     // Objeto del menu
     public GameObject menu;
 
-    // Botón de pausa
-    public GameObject pauseButton;
-
-    // Texto en pantalla
-    public GameObject infoBox;
-
     // ImageTarget
     public GameObject imageTarget;
 
-    // Cosas del timer
-    public GameObject clock;
-    public GameObject timer;
+    // Interfaz
+    public GameObject uiPanel;
+
+    // Instrucciones
+    public GameObject instructionPanel1;
+    public GameObject instructionPanel2;
+
 
     // Método para abrir el menú
     public void OpenMenu()
@@ -46,14 +44,30 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
+    // Cosas de las instrucciones
+    public void ShowInstructions1()
+    {
+        imageTarget.SetActive(false);
+        uiPanel.SetActive(false);
+        instructionPanel1.SetActive(true);
+    }
+    public void ShowInstructions2()
+    {
+        instructionPanel1.SetActive(false);
+        instructionPanel2.SetActive(true);
+    }
+    public void CloseInstructions()
+    {
+        instructionPanel2.SetActive(false);
+        imageTarget.SetActive(true);
+        uiPanel.SetActive(true);
+    }
+
     // Método de algo
     void Activate(bool a, bool b)
     {
         menu.SetActive(a);
-        pauseButton.SetActive(b);
-        infoBox.SetActive(b);
         imageTarget.SetActive(b);
-        timer.SetActive(b);
-        clock.SetActive(b);
+        uiPanel.SetActive(b);
     }
 }

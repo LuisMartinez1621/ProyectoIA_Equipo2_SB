@@ -18,6 +18,11 @@ public class BasketTriggers : MonoBehaviour
     public Text timer;
     float time;
 
+    // Números de si o no
+    public Text correctText;
+    public Text incorrectText;
+    float textTime;
+
     // Start
     private void Start()
     {
@@ -31,11 +36,17 @@ public class BasketTriggers : MonoBehaviour
     {
         // TODO PARA EL TEMPORIZADOR!!!
         time -= Time.deltaTime;
+        textTime -= Time.deltaTime;
         timer.text = time.ToString("f0");
 
         if (time < 0)
         {
             resultScreen.GetComponent<ResultScreen>().ShowResult();
+        }
+        if(textTime < 0)
+        {
+            correctText.text = " ";
+            incorrectText.text = " ";
         }
     }
 
@@ -54,19 +65,31 @@ public class BasketTriggers : MonoBehaviour
             {
                 case "Needed":
                     gameVariables.points += 100;
-                    text.GetComponent<Text>().text = "Ingrediente necesario " + gameVariables.points.ToString();
+                    text.GetComponent<Text>().text = "Puntos: " + gameVariables.points.ToString();
                     gameVariables.ingredientsCount--;
                     other.gameObject.SetActive(false);
+                    correctText.text = " ";
+                    incorrectText.text = " ";
+                    correctText.text = "+100";
+                    textTime = 2f;
                     break;
                 case "Optional":
                     gameVariables.points += 50;
-                    text.GetComponent<Text>().text = "Ingrediente opcional " + gameVariables.points.ToString();
+                    text.GetComponent<Text>().text = "Puntos: " + gameVariables.points.ToString();
                     gameVariables.ingredientsCount--;
                     other.gameObject.SetActive(false);
+                    correctText.text = " ";
+                    incorrectText.text = " ";
+                    correctText.text = "+50";
+                    textTime = 2f;
                     break;
                 case "Wrong":
                     gameVariables.points -= 25;
-                    text.GetComponent<Text>().text = "Ingrediente incorrecto " + gameVariables.points.ToString();
+                    text.GetComponent<Text>().text = "Puntos: " + gameVariables.points.ToString();
+                    correctText.text = " ";
+                    incorrectText.text = " ";
+                    incorrectText.text = "-25";
+                    textTime = 2f;
                     break;
                 default:
                     text.GetComponent<Text>().text = "Hubo algo siniestro";

@@ -22,7 +22,6 @@ public class Level1Manager : MonoBehaviour
     // Lista donde se guardarán los ingredientes del nivel
     GameObject[] list;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +37,15 @@ public class Level1Manager : MonoBehaviour
 
         // Llamada al método que pondrá en su posición a los ingredientes del nivel
         GenerateIngredients();
+        
     }
 
     // Método que genera los cilindros base
     void GenerateBase()
     {
+        //float x2 = 0;
+        //float y2 = 0;
+
         // Ciclo anidado que genera las bases de los ingredientes
         for (int x = 0; x < 3; x++)
         {
@@ -55,7 +58,7 @@ public class Level1Manager : MonoBehaviour
                 cylinders[x, y].transform.parent = imageTarget.transform;
 
                 // Se ajusta la posición
-                cylinders[x, y].transform.localPosition = new Vector3(x - 1, 0.1f, y - 1);
+                cylinders[x, y].transform.localPosition = new Vector3((x - 1f) / 3f, 0f, (y - 1f) / 3f);
             }
         }
     }

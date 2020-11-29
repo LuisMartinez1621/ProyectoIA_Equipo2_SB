@@ -16,8 +16,8 @@ public class ResultScreen : MonoBehaviour
     public Text resultPoints;
 
     // Cosas para ocultar
-    public GameObject pauseButton;
-    public GameObject infoBox;
+    public GameObject uiPanel;
+    public GameObject pauseScreen;
     public GameObject imageTarget;
 
     // Start is called before the first frame update
@@ -31,10 +31,9 @@ public class ResultScreen : MonoBehaviour
     {
         // Ocultando todo
         gameObject.SetActive(true);
-        pauseButton.SetActive(false);
-        infoBox.SetActive(false);
+        uiPanel.SetActive(false);
+        pauseScreen.SetActive(false);
         imageTarget.SetActive(false);
-
         Results();
     }
 
