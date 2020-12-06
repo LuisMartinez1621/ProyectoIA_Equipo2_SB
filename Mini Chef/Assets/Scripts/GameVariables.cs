@@ -8,8 +8,10 @@ public class GameVariables : MonoBehaviour
     // Cosas
     public static GameVariables gameVariables;
 
+    // Variable de la receta
+    public int recipe = 0;
+
     // Nivel1
-    public int level1Recipe = 0;
     public int ingredientsCount = 0;
 
     // Puntos de un nivel

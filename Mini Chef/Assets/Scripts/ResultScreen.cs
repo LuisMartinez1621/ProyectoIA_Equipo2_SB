@@ -41,7 +41,7 @@ public class ResultScreen : MonoBehaviour
     void Results()
     {
         gameVariables = GameObject.Find("GameVariables").GetComponent<GameVariables>();
-        int recipe = gameVariables.level1Recipe;
+        int recipe = gameVariables.recipe;
         float points = gameVariables.points;
 
         // 1. 450
@@ -89,19 +89,19 @@ public class ResultScreen : MonoBehaviour
         if (percent < 66f)
         {
             // Mal, una sola estrella
-            SetResult("Icons/1Star", points);
+            SetResult("Misc/1Star", points);
         }
         else
         {
             if (percent >= 66f && percent < 100)
             {
                 // Bien, dos estrellas
-                SetResult("Icons/2Star", points);
+                SetResult("Misc/2Star", points);
             }
             else
             {
                 // Excelente, tres estrellas
-                SetResult("Icons/3Star", points);
+                SetResult("Misc/3Star", points);
             }
         }
     }

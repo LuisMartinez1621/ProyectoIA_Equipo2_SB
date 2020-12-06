@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8621067585890088317}
   - component: {fileID: 5782859428597072311}
   - component: {fileID: 4937772577389993524}
-  - component: {fileID: 640378754002465731}
   m_Layer: 0
   m_Name: Agua
   m_TagString: Needed
@@ -96,15 +95,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.88151217, y: 0.88151234, z: 1.8624723}
   m_Center: {x: 0, y: 0.00000020861631, z: 0.02269057}
---- !u!114 &640378754002465731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5422374027109048418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf24f3d8b2bf1f147a59976d72a70f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

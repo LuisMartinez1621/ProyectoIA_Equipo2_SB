@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 174640993590432245}
   - component: {fileID: 2704557017120187711}
   - component: {fileID: -1376592844384452222}
-  - component: {fileID: 4024190237687477944}
   m_Layer: 0
   m_Name: Harina
   m_TagString: Wrong
@@ -97,15 +96,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8086006, y: 1.6421639, z: 1.8789074}
   m_Center: {x: 0.00000001490116, y: 0.0033953495, z: 0.024825906}
---- !u!114 &4024190237687477944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4505983605584069866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf24f3d8b2bf1f147a59976d72a70f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

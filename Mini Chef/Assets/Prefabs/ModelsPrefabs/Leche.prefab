@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4448817839625899925}
   - component: {fileID: 1898714782610127711}
   - component: {fileID: 297371266465521052}
-  - component: {fileID: 903190712191789021}
   m_Layer: 0
   m_Name: Leche
   m_TagString: Needed
@@ -98,15 +97,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8119228, y: 0.9513101, z: 1.9239178}
   m_Center: {x: -0.0064579546, y: 0.002753914, z: 0.009092601}
---- !u!114 &903190712191789021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97227033426123402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf24f3d8b2bf1f147a59976d72a70f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

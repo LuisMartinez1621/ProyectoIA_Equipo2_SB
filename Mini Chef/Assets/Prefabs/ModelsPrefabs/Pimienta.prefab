@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7146530467433932104}
   - component: {fileID: 4956603715688010114}
   - component: {fileID: -8581237138944121608}
-  - component: {fileID: -5100474539048413098}
   m_Layer: 0
   m_Name: Pimienta
   m_TagString: Wrong
@@ -97,15 +96,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.282854, y: 1.4907225, z: 1.933332}
   m_Center: {x: -0.00000002980232, y: 0.00000005960465, z: 0.03117812}
---- !u!114 &-5100474539048413098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6902215722309038167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf24f3d8b2bf1f147a59976d72a70f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

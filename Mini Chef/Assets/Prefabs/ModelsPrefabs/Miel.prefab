@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7725840226730095410}
   - component: {fileID: 5535844822415001592}
   - component: {fileID: 6964143667338082564}
-  - component: {fileID: 8624088921581840821}
   m_Layer: 0
   m_Name: Miel
   m_TagString: Wrong
@@ -97,15 +96,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3926231, y: 1.6404189, z: 1.892296}
   m_Center: {x: -0.00000002980232, y: 0.12389776, z: 0.019267801}
---- !u!114 &8624088921581840821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6328606380971583021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf24f3d8b2bf1f147a59976d72a70f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

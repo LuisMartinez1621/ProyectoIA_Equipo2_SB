@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/RecipeList.unity
+    guid: 76c14ad4a10975d4498ef96de0349d02
+  - enabled: 1
+    path: Assets/Scenes/LevelSelection.unity
+    guid: c518a5e2c86329147a1c3869584a60d9
+  - enabled: 1
     path: Assets/Scenes/Nivel 1 Menu.unity
     guid: 32b0919684d97d4489c1a99582a7c311
   - enabled: 1
     path: Assets/Scenes/Nivel 1.unity
     guid: f7e6158f64363ec4da939c2a53481879
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2.unity
+    guid: 56b62098caf56c2428fb36a5daf6fb48
   m_configObjects: {}

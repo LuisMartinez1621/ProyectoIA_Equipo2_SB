@@ -43,8 +43,6 @@ public class Level1Manager : MonoBehaviour
     // Método que genera los cilindros base
     void GenerateBase()
     {
-        //float x2 = 0;
-        //float y2 = 0;
 
         // Ciclo anidado que genera las bases de los ingredientes
         for (int x = 0; x < 3; x++)
@@ -82,6 +80,9 @@ public class Level1Manager : MonoBehaviour
 
                 // Se ajusta la posición (3 en Z para que queden más o menos arriba de la base)
                 ingredients[x, y].transform.localPosition = new Vector3(0, 0, 3f);
+
+                // Se asigna el script de movimiento
+                ingredients[x, y].AddComponent<Gestures>();
 
                 // Aumento del contador
                 c++;

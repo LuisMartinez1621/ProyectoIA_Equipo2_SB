@@ -40,7 +40,7 @@ public class Ingredients : MonoBehaviour
         gameVariables = GameObject.Find("GameVariables").GetComponent<GameVariables>();
 
         // Se establece la receta del nivel
-        recipe = gameVariables.level1Recipe;
+        recipe = gameVariables.recipe;
 
         // Se crea el arreglo
         GameObject[] array;

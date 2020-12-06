@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 73313749009928087}
   - component: {fileID: 2801381074548259677}
   - component: {fileID: 9205097244546144888}
-  - component: {fileID: 8271804428370612534}
   m_Layer: 0
   m_Name: Atun
   m_TagString: Untagged
@@ -97,15 +96,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.9045384, z: 1.75}
   m_Center: {x: 0, y: 0.00000002980233, z: 0.004685075}
---- !u!114 &8271804428370612534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4458701407244835464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf24f3d8b2bf1f147a59976d72a70f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

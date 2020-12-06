@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8373763424986498131}
   - component: {fileID: 6039716541655314585}
   - component: {fileID: -1015437565748810902}
-  - component: {fileID: 580060074318034007}
   m_Layer: 0
   m_Name: BoteMayonesa
   m_TagString: Optional
@@ -94,15 +93,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.82870466, y: 0.82870483, z: 1.9864758}
   m_Center: {x: -0.000000059604645, y: 0.00000020861631, z: 0.24812257}
---- !u!114 &580060074318034007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5247149046493466956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf24f3d8b2bf1f147a59976d72a70f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

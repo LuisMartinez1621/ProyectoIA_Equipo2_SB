@@ -22,7 +22,7 @@ public class Gestures : MonoBehaviour
     }
 
     // Método que ocurre cuando se suelta un ingrediente
-    private void OnMouseUp()
+    void OnMouseUp()
     {
         // Se toma la posición del padre (de la base que tenía debajo)
         Vector3 cosa = transform.parent.GetComponent<Transform>().position;
@@ -32,7 +32,7 @@ public class Gestures : MonoBehaviour
     }
 
     // Método que ocurre cuando se mantiene presionado sobre un ingrediente (osea el movimiento)
-    public void OnMouseDrag()
+    void OnMouseDrag()
     {
         // No se que es esto pero funciona
         Vector3 curPos =

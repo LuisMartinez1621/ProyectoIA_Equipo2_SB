@@ -68,7 +68,7 @@ public class Level1MenuManager : MonoBehaviour
     public void SetLevel1Recipe(int recipe)
     {
         // Se establece la receta
-        gameVariables.level1Recipe = recipe;
+        gameVariables.recipe = recipe;
         IngredientCount();
 
         // Se oculta el menú de selección y se muestra el de detalle
@@ -86,7 +86,7 @@ public class Level1MenuManager : MonoBehaviour
     // Cantidad de ingredientes
     void IngredientCount()
     {
-        switch(gameVariables.level1Recipe)
+        switch(gameVariables.recipe)
         {
             case 1:
                 gameVariables.ingredientsCount = 6;
@@ -118,12 +118,12 @@ public class Level1MenuManager : MonoBehaviour
             case 1:
                 image3.SetActive(true);
                 image7.SetActive(true);
-                SetImage(image1, "Icons/Jamon", "Jamón");
-                SetImage(image2, "Icons/Pan", "Pan");
-                SetImage(image3, "Icons/Queso", "Queso");
-                SetImage(image5, "Icons/Mostaza", "Mostaza");
-                SetImage(image6, "Icons/Mayonesa", "Mayonesa");
-                SetImage(image7, "Icons/Lechuga", "Lechuga");
+                SetImage(image1, "Ingredients/Jamon", "Jamón");
+                SetImage(image2, "Ingredients/Pan", "Pan");
+                SetImage(image3, "Ingredients/Queso", "Queso");
+                SetImage(image5, "Ingredients/Mostaza", "Mostaza");
+                SetImage(image6, "Ingredients/Mayonesa", "Mayonesa");
+                SetImage(image7, "Ingredients/Lechuga", "Lechuga");
                 break;
 
             // Huev0s
@@ -131,45 +131,45 @@ public class Level1MenuManager : MonoBehaviour
                 image3.SetActive(true);
                 image4.SetActive(true);
                 image7.SetActive(true);
-                SetImage(image1, "Icons/Huevo", "Huevos");
-                SetImage(image2, "Icons/Leche", "Leche");
-                SetImage(image3, "Icons/Jamon", "Jamón");
-                SetImage(image4, "Icons/Mantequilla", "Mantequilla");
-                SetImage(image5, "Icons/Sal", "Sal");
-                SetImage(image6, "Icons/Queso", "Queso");
-                SetImage(image7, "Icons/Pimienta", "Pimienta");
+                SetImage(image1, "Ingredients/Huevo", "Huevos");
+                SetImage(image2, "Ingredients/Leche", "Leche");
+                SetImage(image3, "Ingredients/Jamon", "Jamón");
+                SetImage(image4, "Ingredients/Mantequilla", "Mantequilla");
+                SetImage(image5, "Ingredients/Sal", "Sal");
+                SetImage(image6, "Ingredients/Queso", "Queso");
+                SetImage(image7, "Ingredients/Pimienta", "Pimienta");
                 break;
 
             // Ensalada de atún
             case 3:
                 image7.SetActive(true);
                 image8.SetActive(true);
-                SetImage(image1, "Icons/Atun", "Atún");
-                SetImage(image2, "Icons/Verduras", "Verduras");
-                SetImage(image5, "Icons/Pimienta", "Pimienta");
-                SetImage(image6, "Icons/Mayonesa", "Mayonesa");
-                SetImage(image7, "Icons/Sal", "Sal");
-                SetImage(image8, "Icons/Crema", "Crema");
+                SetImage(image1, "Ingredients/Atun", "Atún");
+                SetImage(image2, "Ingredients/Verduras", "Verduras");
+                SetImage(image5, "Ingredients/Pimienta", "Pimienta");
+                SetImage(image6, "Ingredients/Mayonesa", "Mayonesa");
+                SetImage(image7, "Ingredients/Sal", "Sal");
+                SetImage(image8, "Ingredients/Crema", "Crema");
                 break;
 
             // Arroz con leche
             case 4:
                 image3.SetActive(true);
-                SetImage(image1, "Icons/Agua", "Agua");
-                SetImage(image2, "Icons/Arroz", "Arroz");
-                SetImage(image3, "Icons/Leche", "Leche");
-                SetImage(image5, "Icons/Canela", "Canela");
-                SetImage(image6, "Icons/Pasas", "Pasas");
+                SetImage(image1, "Ingredients/Agua", "Agua");
+                SetImage(image2, "Ingredients/Arroz", "Arroz");
+                SetImage(image3, "Ingredients/Leche", "Leche");
+                SetImage(image5, "Ingredients/Canela", "Canela");
+                SetImage(image6, "Ingredients/Pasas", "Pasas");
                 break;
             
             // Hotcakes
             case 5:
                 image3.SetActive(true);
-                SetImage(image1, "Icons/Harina", "Harina");
-                SetImage(image2, "Icons/Leche", "Leche");
-                SetImage(image3, "Icons/Huevo", "Huevos");
-                SetImage(image5, "Icons/Mantequilla", "Mantequilla");
-                SetImage(image6, "Icons/Miel", "Miel");
+                SetImage(image1, "Ingredients/Harina", "Harina");
+                SetImage(image2, "Ingredients/Leche", "Leche");
+                SetImage(image3, "Ingredients/Huevo", "Huevos");
+                SetImage(image5, "Ingredients/Mantequilla", "Mantequilla");
+                SetImage(image6, "Ingredients/Miel", "Miel");
                 break;
         }
     }

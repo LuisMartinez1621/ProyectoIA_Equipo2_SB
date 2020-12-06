@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6948062683559085626}
   - component: {fileID: 5154525333629645552}
   - component: {fileID: 5358305179958819456}
-  - component: {fileID: 3329716554326140136}
   m_Layer: 0
   m_Name: Lechuga
   m_TagString: Optional
@@ -95,15 +94,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7986927, y: 1.950229, z: 1.9285038}
   m_Center: {x: 0.001739651, y: -0.001384199, z: 0.011486593}
---- !u!114 &3329716554326140136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6667703540885000997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf24f3d8b2bf1f147a59976d72a70f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
