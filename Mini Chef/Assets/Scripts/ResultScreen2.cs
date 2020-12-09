@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ResultScreen : MonoBehaviour
+public class ResultScreen2 : MonoBehaviour
 {
     // Referencia a las variables globalisimas
     GameVariables gameVariables;
@@ -44,31 +44,31 @@ public class ResultScreen : MonoBehaviour
         int recipe = gameVariables.recipe;
         float points = gameVariables.points;
 
-        // 1. 450
-        // 2. 550
-        // 3. 400
-        // 4. 400
-        // 5. 400
-        switch(recipe)
+        // 1. 300
+        // 2. 350
+        // 3. 300
+        // 4. 250
+        // 5. 250
+        switch (recipe)
         {
             case 1:
-                CalculateResult(450, points);
+                CalculateResult(300, points);
                 break;
 
             case 2:
-                CalculateResult(550, points);
+                CalculateResult(350, points);
                 break;
 
             case 3:
-                CalculateResult(400, points);
+                CalculateResult(300, points);
                 break;
 
             case 4:
-                CalculateResult(400, points);
+                CalculateResult(250, points);
                 break;
 
             case 5:
-                CalculateResult(400, points);
+                CalculateResult(250, points);
                 break;
 
             default:
@@ -86,28 +86,28 @@ public class ResultScreen : MonoBehaviour
         percent = Mathf.Round(percent);
 
         // Llamando al método para mostrar los resultados dependiendo del porcentaje
-        if(percent <= 0)
+        if (percent <= 0)
         {
             SetResult("Misc/0Star", "Necesitas repetir el nivel");
         }
         else
         {
-            if (percent > 0 && percent < 66f)
+            if (percent > 0 && percent < 60f)
             {
                 // Mal, una sola estrella
                 SetResult("Misc/1Star", "Necesitas repetir el nivel");
             }
             else
             {
-                if (percent >= 66f && percent < 100)
+                if (percent >= 60f && percent < 100)
                 {
                     // Bien, dos estrellas
-                    SetResult("Misc/2Star", "Nivel 1 completado");
+                    SetResult("Misc/2Star", "Nivel 2 completado");
                 }
                 else
                 {
                     // Excelente, tres estrellas
-                    SetResult("Misc/3Star", "Nivel 1 completado");
+                    SetResult("Misc/3Star", "Nivel 2 completado");
                 }
             }
         }
@@ -161,6 +161,6 @@ public class ResultScreen : MonoBehaviour
                 break;
         }
 
-        SceneManager.LoadScene("Nivel 1");
+        SceneManager.LoadScene("Nivel 2");
     }
 }

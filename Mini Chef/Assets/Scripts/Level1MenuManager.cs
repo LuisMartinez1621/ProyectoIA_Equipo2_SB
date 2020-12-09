@@ -65,7 +65,7 @@ public class Level1MenuManager : MonoBehaviour
     }
 
     // Elección del primer nivel
-    public void SetLevel1Recipe(int recipe)
+    /*public void SetLevel1Recipe(int recipe)
     {
         // Se establece la receta
         gameVariables.recipe = recipe;
@@ -81,7 +81,7 @@ public class Level1MenuManager : MonoBehaviour
         // Cambio de cosas
         screen = 1;
         time = 30f;
-    }
+    }*/
 
     // Cantidad de ingredientes
     void IngredientCount()
@@ -204,17 +204,28 @@ public class Level1MenuManager : MonoBehaviour
     }
 
     // Método para mostrar las primeras instrucciones
-    public void ShowInstructions1()
-    {
-        recipeDetail.SetActive(false);
-        instructionPanel1.SetActive(true);
-    }
-
-    // Método para mostrar las segundas instrucciones
     public void ShowInstructions2()
     {
         instructionPanel1.SetActive(false);
         instructionPanel2.SetActive(true);
+    }
+
+    // Método para mostrar las segundas instrucciones
+    public void ShowInstructionDetail()
+    {
+        // Se establece la receta
+        IngredientCount();
+
+        // Se oculta el menú de selección y se muestra el de detalle
+        instructionPanel2.SetActive(false);
+        recipeDetail.SetActive(true);
+
+        // Se muestra los detalles
+        ShowDetail(gameVariables.recipe);
+
+        // Cambio de cosas
+        screen = 1;
+        time = 30f;
     }
 
     // Método para cargar el nivel

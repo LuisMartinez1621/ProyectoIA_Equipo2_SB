@@ -64,33 +64,19 @@ public class BasketTriggers : MonoBehaviour
             switch(other.tag)
             {
                 case "Needed":
-                    gameVariables.points += 100;
-                    text.GetComponent<Text>().text = "Puntos: " + gameVariables.points.ToString();
-                    gameVariables.ingredientsCount--;
+                    UpdatePoints(100, "+100");
                     other.gameObject.SetActive(false);
-                    correctText.text = " ";
-                    incorrectText.text = " ";
-                    correctText.text = "+100";
-                    textTime = 2f;
                     break;
+
                 case "Optional":
-                    gameVariables.points += 50;
-                    text.GetComponent<Text>().text = "Puntos: " + gameVariables.points.ToString();
-                    gameVariables.ingredientsCount--;
+                    UpdatePoints(50, "+50");
                     other.gameObject.SetActive(false);
-                    correctText.text = " ";
-                    incorrectText.text = " ";
-                    correctText.text = "+50";
-                    textTime = 2f;
                     break;
+
                 case "Wrong":
-                    gameVariables.points -= 25;
-                    text.GetComponent<Text>().text = "Puntos: " + gameVariables.points.ToString();
-                    correctText.text = " ";
-                    incorrectText.text = " ";
-                    incorrectText.text = "-25";
-                    textTime = 2f;
+                    UpdatePoints(-25, "-25");
                     break;
+
                 default:
                     text.GetComponent<Text>().text = "Hubo algo siniestro";
                     break;
@@ -101,6 +87,35 @@ public class BasketTriggers : MonoBehaviour
             {
                 resultScreen.GetComponent<ResultScreen>().ShowResult();
             }
+        }
+    }
+
+    // Método para actualizar los puntos
+    void UpdatePoints(float points, string pointsText)
+    {
+        gameVariables.points += points;
+        correctText.text = " ";
+        incorrectText.text = " ";
+        textTime = 2f;
+
+        if(points > 0)
+        {
+            correctText.text = pointsText;
+            gameVariables.ingredientsCount--;
+        }
+        else
+        {
+            incorrectText.text = pointsText;
+        }
+
+        if(gameVariables.points < 0)
+        {
+            text.GetComponent<Text>().text = "Puntos: 0";
+            gameVariables.points = 0;
+        }
+        else
+        {
+            text.GetComponent<Text>().text = "Puntos: " + gameVariables.points.ToString();
         }
     }
 

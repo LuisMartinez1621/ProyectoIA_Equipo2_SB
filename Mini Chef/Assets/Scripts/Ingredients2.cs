@@ -34,6 +34,15 @@ public class Ingredients2 : MonoBehaviour
     // Variable de la receta
     public int recipe;
 
+    // Arreglo donde se guardarán los GameObjects del nivel
+    public GameObject[] array;
+
+    // Arreglo donde se guardarán los íconos del nivel
+    public String[] icons;
+
+    // Arreglo de las cantidades
+    public float[] quantity;
+
     // Método que inicializa el arreglo con la cantidad de elementos requeridos
     public GameObject[] SetLength()
     {
@@ -58,13 +67,10 @@ public class Ingredients2 : MonoBehaviour
     }
 
     // Método para obtener la lista de ingredientes con sus prefabs
-    internal GameObject[] GetRecipe()
+    internal void GetRecipe()
     {
         // Se establece la receta del nivel
         SetRecipeNumber();
-
-        // Se crea el arreglo
-        GameObject[] array;
 
         // Se crean la lista de ingredientes del nivel
         switch (recipe)
@@ -82,6 +88,22 @@ public class Ingredients2 : MonoBehaviour
                     boteMostaza,
                     lechuga
                 };
+
+                icons = new String[]
+                {
+                    "Ingredients/Jamon",
+                    "Ingredients/Pan",
+                    "Ingredients/Queso",
+                    "Ingredients/Mayonesa",
+                    "Ingredients/Mostaza",
+                    "Ingredients/Lechuga"
+                };
+
+                quantity = new float[]
+                {
+                    2, 2, 1, 3, 1, 2
+                };
+
                 break;
 
             // Huev0s con jamón
@@ -98,6 +120,22 @@ public class Ingredients2 : MonoBehaviour
                     queso,
                     sal
                 };
+
+                icons = new String[]
+                {
+                    "Ingredients/Huevo",
+                    "Ingredients/Jamon",
+                    "Ingredients/Leche",
+                    "Ingredients/Mantequilla",
+                    "Ingredients/Pimienta",
+                    "Ingredients/Queso",
+                    "Ingredients/Sal"
+                };
+
+                quantity = new float[]
+                {
+                    3, 2, 1, 2, 1, 1, 2
+                };
                 break;
 
             // Ensalada de atún
@@ -113,6 +151,22 @@ public class Ingredients2 : MonoBehaviour
                     pimienta,
                     sal
                 };
+
+                icons = new String[]
+                {
+                    "Ingredients/Atun",
+                    "Ingredients/Verduras",
+                    "Ingredients/Crema",
+                    "Ingredients/Mayonesa",
+                    "Ingredients/Pimienta",
+                    "Ingredients/Sal"
+                };
+
+                quantity = new float[]
+                {
+                    2, 1, 1, 3, 1, 2
+                };
+
                 break;
 
             // Arroz con leshe
@@ -126,8 +180,22 @@ public class Ingredients2 : MonoBehaviour
                     // Puede llevar
                     canela,
                     pasas
-
                 };
+
+                icons = new String[]
+                {
+                    "Ingredients/Agua",
+                    "Ingredients/Arroz",
+                    "Ingredients/Leche",
+                    "Ingredients/Canela",
+                    "Ingredients/Pasas"
+                };
+
+                quantity = new float[]
+                {
+                    1, 3, 3, 2, 1
+                };
+
                 break;
 
             // Hot cakes
@@ -142,13 +210,28 @@ public class Ingredients2 : MonoBehaviour
                     mantequilla,
                     miel
                 };
+
+                icons = new String[]
+                {
+                    "Ingredients/Harina",
+                    "Ingredients/Huevo",
+                    "Ingredients/Leche",
+                    "Ingredients/Mantequilla",
+                    "Ingredients/Miel",
+                };
+
+                quantity = new float[]
+                {
+                    2, 2, 3, 2, 1
+                };
+
                 break;
 
             default:
                 array = new GameObject[] { };
+                icons = new String[] { };
                 break;
         }
-        return array;
     }
 
     // Método para asignar la variable de la receta
