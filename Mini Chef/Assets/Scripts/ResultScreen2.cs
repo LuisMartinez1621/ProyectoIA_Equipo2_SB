@@ -19,6 +19,7 @@ public class ResultScreen2 : MonoBehaviour
     public GameObject uiPanel;
     public GameObject pauseScreen;
     public GameObject imageTarget;
+    public GameObject quantityMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class ResultScreen2 : MonoBehaviour
         // Ocultando todo
         gameObject.SetActive(true);
         uiPanel.SetActive(false);
+        quantityMenu.SetActive(false);
         pauseScreen.SetActive(false);
         imageTarget.SetActive(false);
         Results();

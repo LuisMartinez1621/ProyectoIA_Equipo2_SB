@@ -15,6 +15,9 @@ public class PauseMenu : MonoBehaviour
     // Interfaz
     public GameObject uiPanel;
 
+    // Cosa de las cantidades
+    public GameObject quantityMenu;
+
     // Instrucciones
     public GameObject instructionPanel1;
     public GameObject instructionPanel2;
@@ -24,6 +27,7 @@ public class PauseMenu : MonoBehaviour
     public void OpenMenu()
     {
         Activate(true, false);
+        quantityMenu.SetActive(false);
     }
 
     // Método para cerrar el menú
@@ -49,6 +53,7 @@ public class PauseMenu : MonoBehaviour
     {
         imageTarget.SetActive(false);
         uiPanel.SetActive(false);
+        quantityMenu.SetActive(false);
         instructionPanel1.SetActive(true);
     }
     public void ShowInstructions2()

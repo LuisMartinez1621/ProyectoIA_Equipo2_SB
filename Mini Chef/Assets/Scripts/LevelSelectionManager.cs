@@ -34,7 +34,7 @@ public class LevelSelectionManager : MonoBehaviour
                 SceneManager.LoadScene("Nivel 1 Menu");
                 break;
             case 2:
-                SceneManager.LoadScene("Nivel 2");
+                SceneManager.LoadScene("Nivel 2 Menu");
                 break;
             case 3:
                 // Aún no hay nivel 3!!!
